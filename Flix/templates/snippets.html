@@ -1,4 +1,5 @@
 {% for movie in category %}
+<a href="{% url 'movie' movie_id=movie.id %}">
 <div class="tile">
   <div class="tile__media">
     <img class="tile__img" src="{{movie.poster}}" alt="" />
@@ -9,4 +10,5 @@
     </div>
   </div>
 </div>
+</a>
 {% endfor %}

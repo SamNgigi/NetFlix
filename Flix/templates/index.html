@@ -1,28 +1,32 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="contain">
 
- <div class="row">
-   <div class="row__inner">
-     <h2>Popular</h2>
-     {% include 'snippets.html' with category=popular %}
 
-   </div>
- </div>
- <div class="row">
-   <div class="row__inner">
-     <h2>Upcoming</h2>
-     {% include 'snippets.html' with category=upcoming %}
+<div class="uk-container">  
+  <div class="row">
+    <div class="row__inner">
+      <h2>Popular</h2>
+      {% include 'snippets.html' with category=popular %}
 
-   </div>
- </div>
- <div class="row">
-   <div class="row__inner">
-     <h2>Upcoming</h2>
-     {% include 'snippets.html' with category=now_playing %}
+    </div>
+  </div>
+  <div class="row">
+    <div class="row__inner">
+      <h2>Upcoming</h2>
+      {% include 'snippets.html' with category=upcoming %}
 
-   </div>
- </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="row__inner">
+      <h2>Upcoming</h2>
+      {% include 'snippets.html' with category=now_playing %}
 
+    </div>
+  </div>
 </div>
+
+
+
+
 {% endblock %}
