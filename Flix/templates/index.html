@@ -12,9 +12,13 @@
 {% block content %}
   <h1>{{test}}</h1>
 
-  {% for movie in popular %}
-   <h1>{{movie.title}}</h1>
-  {% endfor %}
+    <h1>Popular</h1>
+    {% include 'snippets.html' with category=popular %}
+    <h1>Upcoming</h1>
+    {% include 'snippets.html' with category=upcoming %}
+    <h1>Now showing</h1>
+    {% include 'snippets.html' with category=now_playing %}
+
   <img src="https://image.tmdb.org/t/p/w500/{{poster}}" alt="">
   <p>{{trailer}}</p>
   <a href="https://www.youtube.com/watch?v={{trailer}}">Youtube trailer</a>
