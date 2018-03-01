@@ -6,6 +6,5 @@ from .fetch import get_movies
 
 def index(request):
     # test = 'Working'
-    content = get_movies()
-
-    return render(request, 'index.html', content)
+    popular = get_movies('popular')
+    return render(request, 'index.html', {"popular": popular})

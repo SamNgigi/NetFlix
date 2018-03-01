@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
-MOVIE_DATABASE_URL = 'http://api.themoviedb.org/3/movie/157336?api_key={}&append_to_response=videos'
+MOVIE_DATABASE_URL = 'https://api.themoviedb.org/3/movie/{}?api_key={}&append_to_response=videos'
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY')
