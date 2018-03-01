@@ -25,12 +25,13 @@ SECRET_KEY = '2$xvw@c#kx9j#fwgmq@stanofp91%tn-ijz51h#sbgtqo2bnqv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'Flix.apps.FlixConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
