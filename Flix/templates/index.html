@@ -1,20 +1,28 @@
 {% extends 'base.html' %}
 {% block content %}
-  <h1>{{test}}</h1>
+<div class="contain">
 
-    <h1>Popular</h1>
-    {% include 'snippets.html' with category=popular %}
-    <h1>Upcoming</h1>
-    {% include 'snippets.html' with category=upcoming %}
-    <h1>Now showing</h1>
-    {% include 'snippets.html' with category=now_playing %}
+ <div class="row">
+   <div class="row__inner">
+     <h3>Popular</h3>
+     {% include 'snippets.html' with category=popular %}
 
-  <img src="https://image.tmdb.org/t/p/w500/{{poster}}" alt="">
-  <p>{{trailer}}</p>
-  <a href="https://www.youtube.com/watch?v={{trailer}}">Youtube trailer</a>
+   </div>
+ </div>
+ <div class="row">
+   <div class="row__inner">
+     <h3>Upcoming</h3>
+     {% include 'snippets.html' with category=upcoming %}
 
-  <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-  <!-- <div id="player"></div> -->
-  <iframe id="player" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/{{trailer}}" frameborder="0">
-  </iframe>
+   </div>
+ </div>
+ <div class="row">
+   <div class="row__inner">
+     <h3>Upcoming</h3>
+     {% include 'snippets.html' with category=now_playing %}
+
+   </div>
+ </div>
+
+</div>
 {% endblock %}

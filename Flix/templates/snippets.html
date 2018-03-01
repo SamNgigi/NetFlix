@@ -1,5 +1,12 @@
-<ul>
-  {% for movie in category %}
-    <li>{{movie.title}}</li>
-  {% endfor %}
-</ul>
+{% for movie in category %}
+<div class="tile">
+  <div class="tile__media">
+    <img class="tile__img" src="{{movie.poster}}" alt="" />
+  </div>
+  <div class="tile__details">
+    <div class="tile__title">
+      {{movie.title}}
+    </div>
+  </div>
+</div>
+{% endfor %}
