@@ -6,7 +6,17 @@ from .fetch import get_movies
 
 def index(request):
     test = 'Working'
+    movie_data = get_movies()
+    videos = movie_data['videos']
+    trailer = videos['results']
+    youtube_trailer = trailer[0]['key']
+    print(youtube_trailer)
 
-    movie = get_movies()
-    print(movie)
-    return render(request, 'index.html', {"test": test})
+    content = {
+        "test": test,
+        'title': movie_data['title'],
+        'poster': movie_data['poster_path'],
+        'trailer': youtube_trailer
+    }
+
+    return render(request, 'index.html', content)
