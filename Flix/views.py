@@ -7,4 +7,12 @@ from .fetch import get_movies
 def index(request):
     # test = 'Working'
     popular = get_movies('popular')
-    return render(request, 'index.html', {"popular": popular})
+    upcoming = get_movies('upcoming')
+    now_playing = get_movies('now_playing')
+
+    content = {
+        "popular": popular,
+        "upcoming": upcoming,
+        "now_playing": now_playing,
+    }
+    return render(request, 'index.html', content)
