@@ -1,14 +1,4 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-  {% block styles %}
-    <link rel="stylesheet" href="{% static 'Css/main.css' %}">
-  {% endblock %}
-  {% block scripts %}
-    <script src="{% static 'Js/main.js' %}" type="text/javascript" charset="utf-8"></script>
-  {% endblock %}
-  <title>Home</title>
-<body>
+{% extends 'base.html' %}
 {% block content %}
   <h1>{{test}}</h1>
 
@@ -28,6 +18,3 @@
   <iframe id="player" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/{{trailer}}" frameborder="0">
   </iframe>
 {% endblock %}
-</body>
-
-</html>
